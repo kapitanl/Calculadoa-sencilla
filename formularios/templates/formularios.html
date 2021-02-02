@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+   
+    
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+    <title>formularios</title>
+</head>
+<body>
+    <div class="contenedor">
+         <form action="/buscar/" method="POST"> {% csrf_token %}
+        <h1>Suma y resta</h1>
+    <br>
+    <h2>Ingrese los números a sumar o restar:</h2>
+    <input type="number" name="numero1">
+    <h1>+/-</h1>
+    <input type="number" name="numero2">
+    <br>
+    <br>
+    <input type="submit" value="Sumar/restar" name="operador">
+    </form>
+
+    <form action="/buscar/" method="POST"> {% csrf_token %}
+        <h1>Dividir</h1>
+    <br>
+    <h2>Ingrese los números a dividir:</h2>
+    <input type="number" name="numero1">
+    <h1>/</h1>
+    <input type="number" name="numero2">
+    <br>
+    <br>
+    <input type="submit" value="Dividir" name="operador">
+    </form>
+    </div>
+
+   
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+body{
+    background: teal;
+    color: white;
+    text-align: center;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+
+.error{
+    color: red;
+}

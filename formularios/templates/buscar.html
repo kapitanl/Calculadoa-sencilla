@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+   
+    
+    <link rel="stylesheet" href="{% static 'estilos.css' %}">
+    <title>buscar</title>
+</head>
+<body>
+    {% if Nombre == "sin valor" %}
+
+        <h1>Datos incompletos</h1>
+
+    {% elif sumres %}
+        <h2>La suma o resta de los número es: {{sumres}}</h2>
+
+    {% elif division %}
+        {% if division == "Error" %}
+            <h2 class="error">No se permite dividir entre cero</h2>
+        {% else %}
+            <h2>La división es: {{division}}</h2>
+        {% endif %}
+
+    {% endif %}
+
+    
+</body>
+</html>
